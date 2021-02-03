@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Button from './components/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Button size = "small" type="primary" content="Click"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
