@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {useState} from 'react';
+import Input from './components/Input/Input';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [content,setContent] = useState("KEKW")
+    const handleKeyPress = (e) => {
+        if(e.key === 'Enter'){
+          console.log('enter press here! ')
+        }
+      }
+    
+    return(
+      
+        <Input
+        maxLength={11}
+        disabled={false} 
+        id="1" 
+        contentValue={content}
+        onChange={(e)=>{setContent(e.target.value)}}
+        onPressEnter={handleKeyPress}
+        defaultValue="" 
+        placeholder="Write Something" 
+        />
+    )
 }
 
-export default App;
+export default App
