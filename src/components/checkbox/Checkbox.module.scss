@@ -1,0 +1,39 @@
+.checkWrap{
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(116, 116, 116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: silver;
+}
+.uncheckWrap{
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(116, 116, 116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.wrap{
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgb(116, 116, 116);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.checked{
+    display: flex;
+    height: 40px;
+    width: 55px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    filter: invert(77%) sepia(97%) saturate(258%) hue-rotate(95deg) brightness(97%) contrast(103%);
+}
+.unchecked{
+    display: none;
+}
