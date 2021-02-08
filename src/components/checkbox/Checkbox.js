@@ -1,4 +1,4 @@
-import styles from "./Checkbox.module.scss"
+import styles from "./checkbox.module.scss"
 
 const Checkbox = ({checkState,setCheckState,disabled,checked}) => {
 
@@ -13,8 +13,8 @@ const Checkbox = ({checkState,setCheckState,disabled,checked}) => {
     return(
         <div 
         className={`${styles.wrap} 
-        ${ disabled ? setCheckState(null) : checkWrapFunc()} 
-        ${checked === true ? setCheckState(true) : setCheckState(true)}`}
+        ${ (disabled ? setCheckState(null) : checkWrapFunc()) && (checked === true ? (setCheckState(true) ,
+        checkWrapFunc() ) : setCheckState(checkState))} `}
         onClick={() => setCheckState(!checkState)}>
 
         <img src="./assets/check-mark-line.svg" alt="" 
